@@ -2,10 +2,30 @@ $schema: https://api.gitbook.com/gitbook-docs.yaml
 site:
   title: Edward Docs
   structure:
-    - type: space
-      key: space-1
-      title: Documentation
-      path: documentation
+    - type: section
+      key: section-1
+      title: Edward Docs
+      path: edward-docs
       default: true
-      content:
-        directory: ./documentation
+      children:
+        - type: space
+          key: space-1
+          title: Documentation
+          path: documentation
+          default: true
+          content:
+            directory: ./documentation
+    - type: section
+      key: section-2
+      title: Documentation (EN)
+      path: documentation-en
+      children:
+        - type: space
+          key: space-2
+          title: Documentation (EN)
+          path: documentation-en
+          default: true
+          draft: true
+          content:
+            directory: ./documentation-en
+            language: en
